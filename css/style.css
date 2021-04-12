@@ -1,0 +1,282 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font: 16px/1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+  color: #f0f8ff;
+  overflow-y: scroll;
+  font-family: "Cinzel", serif;
+}
+/*Globals*/
+
+h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: lighter;
+}
+ul {
+  font-family: "Cinzel", serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+hr {
+  border: 1px solid #3a7ea0;
+  margin: 0;
+  background-color: #3a7ea0;
+}
+.hr-blue {
+  border: 2px solid #3a7ea0;
+  width: 60px;
+}
+.index {
+  font-size: 10em;
+  font-weight: 900;
+}
+.heading {
+  font-size: 1em;
+}
+.subheading {
+  font-size: 1.5em;
+}
+
+/*Header*/
+
+header img {
+  max-width: 3%;
+  height: auto;
+  padding: 2em;
+}
+header #brand-logo {
+}
+/* header a {
+  text-decoration: none;
+  font-size: 16px;
+} */
+
+header a:hover {
+  color: #e43f5a;
+}
+
+/*Hero*/
+
+#hero {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 6rem;
+  background-color: #212121;
+  min-height: 400px;
+  text-align: center;
+  margin: auto;
+}
+#hero .tri-img {
+  max-width: 30%; /* width: 450px; prev*/
+  height: 100%;
+}
+section,
+.hero-container {
+  position: relative;
+  margin-bottom: 10em;
+}
+
+#hero h1 {
+  font-family: "Cinzel", serif;
+  margin: 0;
+  font-size: 4em;
+  font-weight: lighter;
+  color: #e43f5a;
+  margin: auto;
+}
+#hero h2 {
+  color: #e43f5a;
+  font-weight: lighter;
+  font-size: 3em;
+  line-height: 0.5;
+  margin: auto;
+}
+#hero h3 {
+  margin: 0;
+  font-weight: lighter;
+  font-size: 2em;
+  color: #e43f5a;
+  margin: auto;
+}
+/* #hero p {
+  font-size: 20px;
+  color: #f0f8ff;
+}
+#hero .style {
+  font-weight: bolder;
+  color: #e43f5a;
+} */
+.tri-shade {
+  position: absolute;
+  top: 14%;
+  right: 0;
+  width: 144px;
+}
+
+/*Nav*/
+nav {
+  margin: 1.2em 0 20em 0;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10em 0 10em 0;
+}
+nav h2{
+  font-size:2em;
+  font-weight:500;
+}
+nav h2 .dot {
+  color: #e43f5a;
+}
+nav ul a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #e43f5b;
+  padding: 10rem;
+}
+
+/* About */
+#about {
+  display: flex;
+  background-color: #262728;
+  max-width: 1500px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
+  -webkit-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
+  -moz-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
+}
+
+#about img {
+  width: 350px;
+  height: 100%;
+}
+
+#about .card-front {
+}
+#about .index {
+}
+#about .heading {
+  display: block;
+  color: #3a7ea0;
+}
+#about .subheading {
+  display: block;
+}
+
+/*Showcase*/
+#showcase {
+  display: flex;
+  background-color: #262728;
+  max-width: 1500px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+  -webkit-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+  -moz-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+}
+#showcase .heading {
+  display: block;
+  color: #3a7ea0;
+}
+#showcase .subheading {
+  display: block;
+}
+
+/*Contact*/
+#contact {
+  display: flex;
+  background-color: #262728;
+  max-width: 1000px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+  -webkit-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+  -moz-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 0.5);
+}
+#contact .heading {
+  display: block;
+  color: #3a7ea0;
+}
+#contact .subheading {
+  display: block;
+}
+#contact h2 {
+}
+
+#about article .fa-icons i {
+  margin-right: 2.5rem;
+  font-size: 2em;
+  color: #eeeeee;
+  /* cursor: pointer; */
+}
+
+article .boldName {
+}
+
+article .aboutMe {
+  margin: 10px 0 20px 0;
+}
+section #about img {
+  width: 350px;
+  height: 100%;
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 75ch;
+  margin: auto;
+}
+
+#showcase .container {
+  max-height: 20vh;
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-container {
+    margin: auto;
+  }
+  header img {
+    width: 10%;
+    padding: 2em;
+  }
+  nav ul {
+    display: none;
+  }
+  nav h2 {
+    margin: 7rem auto 13rem auto;
+  }
+  .tri-shade {
+    display: none;
+  }
+  #hero .tri-img {
+    width: 70%; /* width: 450px; prev*/
+    height: 100%;
+    margin: 2em 0 5em 0;
+  }
+  #hero .hero-inner h1 {
+    font-size: 3rem;
+  }
+  #hero .hero-inner h2 {
+    font-size: 2rem;
+  }
+}
