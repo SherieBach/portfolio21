@@ -72,35 +72,39 @@
         </p>
       </article>
     </section> -->
-    <div id="about">
-      <div class="card-front">
-        <span class="index">01.</span>
-        <span class="heading">ABOUT ME</span>
-        <span class="subheading">MY BACKGROUND</span>
-        <hr class="hr-blue" />
-      </div>
-      <section class="container card-back">
-        <div class="pofile">
-          <img src="./image/S-Q.png" />
+    <button onclick="toggle()">FLIPIT</button>
+    <div id="about" class="cards">
+      <div class="card-content">
+        <div class="card-front">
+          <span class="index">01.</span>
+          <span class="heading">ABOUT ME</span>
+          <span class="subheading">MY BACKGROUND</span>
+          <hr class="hr-blue" />
         </div>
-        <article>
-          <h2>About me</h2>
-          <h3>Hi! I'm <span class="boldName">Sherie!</span></h3>
-          <br />
-          <p class="aboutMe">
-            Nunc pharetra ex sit amet lectus hendrerit dictum. Donec nisl est,
-            interdum eget mauris eget, ultrices interdum nisl. Donec justo diam,
-            elementum a erat nec, vehicula sodales purus.
-          </p>
-          <div class="fa-icons">
-            <a href=""><i class="fa fa-linkedin"></i></a>
-            <a href=""><i class="fa fa-github"></i></a>
-            <a href=""><i class="fa fa-envelope-o"></i></a>
+        <section class="container card-back">
+          <div class="pofile">
+            <img src="./image/S-Q.png" />
           </div>
-        </article>
-      </section>
+          <article>
+            <h2>About me</h2>
+            <h3>Hi! I'm <span class="boldName">Sherie!</span></h3>
+            <br />
+            <p class="aboutMe">
+              Nunc pharetra ex sit amet lectus hendrerit dictum. Donec nisl est,
+              interdum eget mauris eget, ultrices interdum nisl. Donec justo
+              diam, elementum a erat nec, vehicula sodales purus.
+            </p>
+            <div class="fa-icons">
+              <a href=""><i class="fa fa-linkedin"></i></a>
+              <a href=""><i class="fa fa-github"></i></a>
+              <a href=""><i class="fa fa-envelope-o"></i></a>
+            </div>
+          </article>
+        </section>
+      </div>
     </div>
-    <div id="showcase">
+    <div id="showcase" class="cards">
+      <div class="card-content">
       <div class="card-front">
         <span class="index">02.</span>
         <span class="heading">PORTFOLIO</span>
@@ -118,7 +122,9 @@
         </article>
       </section>
     </div>
-    <div id="contact">
+    </div>
+    <div id="contact" class="cards">
+      <div class="card-content">
       <div class="card-front">
         <span class="index">03.</span>
         <span class="heading">CONTACT</span>
@@ -136,8 +142,11 @@
         </article>
       </section>
     </div>
+    </div>
     <footer>
       <p>Sherie.klappenbach@gmail.com</p>
     </footer>
+    <script src="/script.js">
+    </script>
   </body>
 </html>

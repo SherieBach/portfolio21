@@ -135,9 +135,9 @@ nav ul {
   justify-content: space-around;
   margin: 10em 0 10em 0;
 }
-nav h2{
-  font-size:2em;
-  font-weight:500;
+nav h2 {
+  font-size: 2em;
+  font-weight: 500;
 }
 nav h2 .dot {
   color: #e43f5a;
@@ -152,22 +152,71 @@ nav ul a {
 /* About */
 #about {
   display: flex;
+  flex-direction: column;
   background-color: #262728;
-  max-width: 1500px;
+  max-width: 1000px;
   border-radius: 5px;
   margin: auto;
   padding: 1rem;
-  box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
-  -webkit-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
-  -moz-box-shadow: -2px 2px 3px 5px rgba(33, 33, 33, 5);
+  text-align: center;
+  position: relative;
 }
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 50px auto;
+  position: absolute;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+.card-content #about {
+  display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 140px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-content .card-front {
+  
+} 
+
+.card-content .card-back {
+  background: blue;
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+} 
+
+.card-content.flip {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
 
 #about img {
   width: 350px;
   height: 100%;
-}
-
-#about .card-front {
 }
 #about .index {
 }
@@ -178,6 +227,9 @@ nav ul a {
 #about .subheading {
   display: block;
 }
+/* #about:hover .card-inner {
+  transform: rotateY(180deg);
+} */
 
 /*Showcase*/
 #showcase {
