@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: softwarelseorg/sherie-portfolio:${{ github.sha }}
+          tags: softwarelseorg/sherie-portfolio:${{ github.sha }} softwarelseorg/sherie-portfolio:latest
       - name: deploy to cluster
         uses: steebchen/kubectl@master
         env:
@@ -36,4 +36,4 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
           KUBECTL_VERSION: "1.15"
         with:
-          args: '"rollout status deployment/my-app"'
+          args: '"rollout status  deployment/sherie-portfolio"'
