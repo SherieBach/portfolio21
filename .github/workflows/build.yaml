@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: softwarelseorg/sherie-portfolio:${{ github.sha }} softwarelseorg/sherie-portfolio:latest
+          tags: softwarelseorg/sherie-portfolio:${{ github.sha }}
       - name: deploy to cluster
         uses: steebchen/kubectl@master
         env:
