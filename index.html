@@ -15,23 +15,20 @@
     />
     <meta name="author" content="Sherie Klappenbach"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/cursor.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <!--<link rel="shortcut icon" href="image/sherie-logo-white_2x.png" />-->
 
-    <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_package/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_package/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_package/favicon-16x16.png">
@@ -39,9 +36,26 @@
     <link rel="mask-icon" href="image/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
-    <title>Portfolio | Welcome</title>
+    <title> Portfolio | Welcome </title>
 </head>
 <body>
+<!--<div id="cursor-letter-ark">
+    <div id="cursor-word">
+        <span class="w0">H</span>
+        <span class="w1">i</span>
+        <span class="w2"></span>
+        <span class="w3">b</span>
+        <span class="w4">e</span>
+        <span class="w5">a</span>
+        <span class="w6">u</span>
+        <span class="w7">t</span>
+        <span class="w8">i</span>
+        <span class="w9">f</span>
+        <span class="w10">u</span>
+        <span class="w11">l</span>
+        <span class="w12">!</span>
+    </div>
+</div>-->
 <!--Navigation-->
 <header>
     <div id="brand-logo">
@@ -51,10 +65,11 @@
 <!--Hero-->
 <section class="hero-container">
     <div id="hero" class="hero-block">
-        <img class="tri-img" src="./image/rectangle-image.svg" alt=""/>
+        <img class="tri-img" src="image/triangle-image.svg" alt="an s-shape of triangles"/>
+        <img class="mobile-img" src="image/mobile-background.png" alt=""/>
         <div class="hero-inner_block">
-            <h2>Sherie</h2>
-            <h1>Klappenbach</h1>
+            <h1>Sherie</h1>
+            <h2>Klappenbach</h2>
             <h3>Frontend developer</h3>
             <!-- <p>Frontend developer & designer based in Stockholm</p>
             <p>Design, code and some dash of <span class="style">bold</span>.</p> -->
@@ -65,36 +80,39 @@
 <!--Nav-->
 <nav>
     <h2>Enter<span class="coloured-dot">.</span></h2>
-    <ul>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Portfolio</a></li>
-    </ul>
+    <div class="nav-list">
+        <a href="#showcase">Portfolio</a>
+        <div class="vertical-line"></div>
+        <a href="#contact">contact</a>
+    </div>
 </nav>
 <!--About-->
 <div class="card-container">
     <div id="about" class="cards">
         <div class="card-inner">
             <div class="card-visual card-visual--front">
-                <span class="index">01.</span>
-                <div class="card-visual--content">
-                    <div class="heading">ABOUT ME</div>
-                    <div class="subheading">MY BACKGROUND</div>
-                    <hr class="hr-blue"/>
+                <div class="card-visual--container">
+                    <span class="index">01.</span>
+                    <div class="card-visual--content">
+                        <div class="heading">ABOUT ME</div>
+                        <div class="subheading">MY BACKGROUND</div>
+                        <hr class="hr-blue"/>
+                    </div>
                 </div>
             </div>
             <div class="card-visual card-visual--back">
                 <article class="card-content">
                     <div class="card-header">
-                        <h2>About me, Sherie</h2>
                         <div class="profile">
                             <img src="./image/S-Q.png"/>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>JavaScript Wizard</h3>
-                        <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit.
-                            Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien
-                            placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        <div class="card-body">
+                            <h3>Hi there, my name is Sherie</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id erat a magna lobortis
+                                dictum.
+                                Nunc est arcu, lacinia laoreet tincidunt nulla.</p>
+                        </div>
+                        <span class="card-body--index">01.</span>
                     </div>
                     <br/>
                     <div class="fa-icons">
@@ -110,23 +128,25 @@
     <div id="showcase" class="cards">
         <div class="card-inner">
             <div class="card-visual card-visual--front">
-                <span class="index">02.</span>
-                <div class="card-visual--content">
-                    <div class="heading">PORTFOLIO</div>
-                    <div class="subheading">MY LATEST WORK</div>
-                    <hr class="hr-blue"/>
+                <div class="card-visual--container">
+                    <span class="index">02.</span>
+                    <div class="card-visual--content">
+                        <div class="heading">PORTFOLIO</div>
+                        <div class="subheading">MY LATEST WORK</div>
+                        <hr class="hr-blue"/>
+                    </div>
                 </div>
             </div>
             <div class="card-visual card-visual--back">
                 <article class="card-content">
                     <div class="card-header">
-                        <h2>My work</h2>
-                    </div>
-                    <div class="card-body">
-                        <h3>JavaScript Wizard</h3>
-                        <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit.
-                            Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien
-                            placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        <div class="card-body">
+                            <h3> Here are some of my latest work, also this beau page </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Sed id erat a magna lobortis dictum. Nunc est arcu, lacinia quis sapien placerat,
+                                laoreet tincidunt nulla.</p>
+                        </div>
+                        <span class="card-body--index">02.</span>
                     </div>
                 </article>
             </div>
@@ -136,23 +156,25 @@
     <div id="contact" class="cards">
         <div class="card-inner">
             <div class="card-visual card-visual--front">
-                <span class="index">03.</span>
-                <div class="card-visual--content">
-                    <div class="heading">CONTACT</div>
-                    <div class="subheading">HOW YOU CAN REACH ME</div>
-                    <hr class="hr-blue"/>
+                <div class="card-visual--container">
+                    <span class="index">03.</span>
+                    <div class="card-visual--content">
+                        <div class="heading">CONTACT</div>
+                        <div class="subheading">HOW YOU CAN REACH ME</div>
+                        <hr class="hr-blue"/>
+                    </div>
                 </div>
             </div>
             <div class="card-visual card-visual--back">
                 <article class="card-content">
                     <div class="card-header">
-                        <h2>Contact me</h2>
-                    </div>
-                    <div class="card-body">
-                        <h3>JavaScript Wizard</h3>
-                        <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit.
-                            Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien
-                            placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        <div class="card-body">
+                            <h3>Wanna chat or need some consultation ? </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Sed id erat a magna lobortis dictum. Nunc est arcu, lacinia quis sapien placerat,
+                                laoreet tincidunt nulla.</p>
+                        </div>
+                        <span class="card-body--index">03.</span>
                     </div>
                 </article>
             </div>
@@ -160,7 +182,7 @@
     </div>
 </div>
 <footer>
-    <p>Sherie.klappenbach@gmail.com</p>
+    <span>Sherie.klappenbach@gmail.com</span>
 </footer>
 <script src="main.js"></script>
 </body>
