@@ -6,6 +6,7 @@ html {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     background-color: #212121;
     color: #f0f8ff;
     overflow-y: scroll;
@@ -128,9 +129,61 @@ nav .nav-list {
 }
 
 .vertical-line {
-    border-left: 2px solid #3a7ea0;
-    height: 15em;
-    margin-top: 4em;
+    /* border-left: 2px solid #3a7ea0;
+     height: 15em;
+     margin-top: 4em;*/
+}
+
+.vertical-line:before {
+    content: '';
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #212121;
+    z-index: 1;
+}
+
+.vertical-line:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 33.3%;
+    background: #3a7ea0;
+    z-index: 2;
+    transform-origin: bottom;
+    transform: scaleX(0);
+    animation: animate 2s infinite alternate;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) scaleY(0);
+        transform-origin: bottom;
+        top: 33.3%;
+        bottom: auto;
+    }
+    45% {
+        transform: translateY(0) scaleY(1);
+        transform-origin: bottom;
+        top: 33.3%;
+        bottom: auto;
+    }
+    50% {
+        transform: translateY(0) scaleY(1);
+        transform-origin: top;
+        top: auto;
+        bottom: 33.3%;
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+        transform-origin: top;
+        top: auto;
+        bottom: 33.3%;
+    }
 }
 
 nav h2 {
@@ -150,7 +203,10 @@ nav a {
     padding: 10rem;
 }
 
-#about {
+.pointer {
+}
+
+/*#about {
     margin-left: 50px;
 }
 
@@ -160,7 +216,7 @@ nav a {
 
 #contact {
     margin-left: 50px;
-}
+}*/
 
 .card-container {
     display: flex;
@@ -171,13 +227,13 @@ nav a {
 }
 
 .cards {
-    min-width: 58em;
+    min-width: 80%;
     height: 600px;
     perspective: 1000px;
 }
 
-.cards:nth-child(even) .card-visual--back {
-    background: #3a7ea0;
+.cards:nth-child(even) {
+    margin-right: 10%;
 }
 
 .card-inner {
@@ -250,7 +306,7 @@ nav a {
 }
 
 .card-visual--back {
-    background-color: #e43f5a;
+    background-color: #3a7ea0;
     transform: rotateY(180deg);
 }
 
@@ -263,10 +319,26 @@ nav a {
     align-items: center;
 }
 
+.cards:nth-child(even) .card-body {
+    flex-direction: row-reverse;
+}
+
+.fa-icons {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-icons i {
+    font-size: 28px;
+    color: white;
+}
+
 .card-header {
     position: relative;
     padding: 30px 30px 40px;
     display: flex;
+    align-items: center;
 }
 
 .card-header:after {
@@ -280,12 +352,35 @@ nav a {
     z-index: -1;
 }
 
-.profile img {
-    display: block;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 30px;
-    object-fit: cover;
+.profile {
+}
+
+.profile {
+    margin: 0 auto;
+    transform-origin: 35% 35%;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    transform: rotate(45deg) translateY(10px);
+    position: relative;
+
+}
+
+.profile-img {
+    /*
+    width: 440px;
+    height: 550px;
+    transform: rotate(-45deg) translateY(-74px);
+    */
+
+}
+
+.profile > img {
+    position: absolute;
+    left: -35%;
+    bottom: -5%;
+    width: 205%;
+    transform: rotate(-45deg);
 }
 
 .card-header h2 {
@@ -295,14 +390,20 @@ nav a {
     text-align: center;
 }
 
+.card-header span {
+    font-family: 'Raleway', serif;
+}
+
 .card-header .card-body--index {
     font-size: 10em;
     font-weight: 900;
+    font-family: "Cinzel", serif;
 }
 
 .card-body {
+    max-width: 400px;
     padding: 30px;
-
+    position: relative;
 }
 
 .card-body h3 {
@@ -318,6 +419,11 @@ nav a {
     width: 300px;
 }
 
+.card-body .contact-mail, a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
 .card-visual .heading {
     display: block;
     color: #3a7ea0;
@@ -327,6 +433,80 @@ nav a {
 
 .card-visual--front .subheading {
     display: block;
+}
+
+.card-body--inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 55px;
+}
+
+
+.carousel-container {
+    margin: auto;
+    position: relative;
+    max-width: 450px;
+    /* transform: translateX(0);
+     transition: all ease-in-out 0.5s;*/
+}
+
+.imageSlides .img {
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+}
+
+.imageSlides img {
+    width: 100%;
+    vertical-align: center;
+}
+
+.imageSlides {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text {
+    color: #f2f2f2;
+    text-transform: none;
+    margin: 10px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+}
+
+.card-body--content {
+    display: flex;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: fixed;
+    left: 5%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.prev {
+    bottom: 30%;
+    transform: rotate(-90deg);
+}
+
+.next {
+    top: 30%;
+    transform: rotate(-90deg);
+
 }
 
 footer {
@@ -339,6 +519,44 @@ footer {
     border-top-right-radius: 5px;
     text-align: center;
 }
+
+#toTopButton {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 99;
+    outline: none;
+    background-color: transparent;
+    color: #f2f2f2;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 12px 3px 12px;
+    border:none;
+}
+
+#toTopButton > .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+}
+
+#toTopButton > .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+#toTopButton:hover {
+    color: #e43f5a;
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
 
 /*
 /*Showcase/
@@ -391,11 +609,13 @@ footer {
   color: #eeeeee;
 /*  !* cursor: pointer; *!*/
 
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
+and (min-device-width: 280px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
     #about, #showcase, #contact {
         margin: 0 0 5em;
     }
@@ -479,6 +699,145 @@ and (orientation: portrait) {
     .card-visual--front .subheading {
         font-size: 1em;
     }
+
+    .card-body {
+        padding: 0;
+    }
+    .imageSlides .img {
+        height: 250px;
+    }
+
+    .card-body--inner {
+        margin: 0;
+    }
+    .card-body--intro {
+        margin: 10px;
+    }
+
+    .prev, .next {
+        position: fixed;
+        color: white;
+        z-index: 100;
+        font-size: 3em;
+        transform: rotate(0deg);
+    }
+    .prev {
+        top: 90%;
+        left: 5%;
+    }
+    .next{
+        top: 90%;
+        left: 80%;
+    }
+
+    .card-header {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .profile {
+        transform-origin: 40% 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-header .card-body--index {
+        font-size: 8em;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    #about, #showcase, #contact {
+        margin: 0 0 5em;
+    }
+
+    #brand-logo img {
+        max-width: 13%;
+    }
+
+    .hero-container {
+        margin: auto;
+    }
+
+    header img {
+        width: 10%;
+        padding: 2em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .tri-shade {
+        display: none;
+    }
+
+    #hero {
+        margin-bottom: 10em;
+        padding-top: 0;
+    }
+
+    #hero .mobile-img {
+        width: 380px;
+        height: auto;
+        display: block;
+    }
+
+    #hero .tri-img {
+        display: none;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        margin-top: 1em;
+    }
+
+    #hero h2 {
+        font-size: 3rem;
+    }
+
+    #hero h3 {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        min-width: 350px;
+
+    }
+
+    .card-visual .heading {
+        font-size: 1em;
+    }
+
+    .card-visual--container {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .cards:nth-child(even) .card-visual--container {
+        flex-direction: column;
+        margin-left: 7.5em;
+    }
+
+    .cards:nth-child(even) .card-visual--content {
+        align-items: normal;
+    }
+
+    .card-visual .index {
+        font-size: 8em;
+    }
+
+    .card-visual--front .subheading {
+        font-size: 1em;
+    }
+
     .card-body {
         padding: 0;
     }
@@ -488,25 +847,41 @@ and (orientation: portrait) {
         flex-direction: column-reverse;
         align-items: center;
     }
-    .profile img{
+
+    .profile img {
         width: 180px;
         height: 180px;
         margin: 0;
     }
+
     .card-header .card-body--index {
         font-size: 8em;
     }
 }
 
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: landscape) {
+and (min-device-width: 736px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    #hero .tri-img {
+        max-width: 40%;
+    }
 
-}
+    #hero h1 {
+        font-size: 3em;
+    }
 
-@media only screen and
-(min-device-width: 768px) and (max-device-width: 1024px) {
+    #hero h2 {
+        font-size: 4em;
+    }
 
+    .tri-shade {
+        width: 120px;
+    }
+
+    #brand-logo img {
+        max-width: 5%;
+    }
 }

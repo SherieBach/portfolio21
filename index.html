@@ -104,7 +104,7 @@
                 <article class="card-content">
                     <div class="card-header">
                         <div class="profile">
-                            <img src="./image/S-Q.png"/>
+                                <img src="./image/couple-2017.jpeg">
                         </div>
                         <div class="card-body">
                             <h3>Hi there, my name is Sherie</h3>
@@ -141,12 +141,30 @@
                 <article class="card-content">
                     <div class="card-header">
                         <div class="card-body">
-                            <h3> Here are some of my latest work, also this beau page </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Sed id erat a magna lobortis dictum. Nunc est arcu, lacinia quis sapien placerat,
-                                laoreet tincidunt nulla.</p>
+                            <!-- Carousel -->
+                            <a class="prev" onclick="show(-1)">&#x3c;</a>
+                            <a class="next" onclick="show(1)">&#x3e;</a>
+                            <div class="carousel-container">
+                                <div class="imageSlides">
+                                    <div class="img"><img src="./image/adventure.png"></div>
+                                    <div><span class="text"> Class project for design</span></div>
+                                </div>
+                                <div class="imageSlides">
+                                   <div class="img"> <img src="./image/softwarelse.png"></div>
+                                    <div><span class="text"> Website in Vue.js</span></div>
+                                </div>
+                                <div class="imageSlides">
+                                  <div class="img" >  <img class="image" src="./image/unsplash-search.png"></div>
+                                    <div><span>Image search - Unsplash API</span></div>
+                                </div>
+                            </div>
                         </div>
-                        <span class="card-body--index">02.</span>
+                        <div class="card-body--content">
+                            <div class="card-body--inner">
+                                <span class="card-body--index">02.</span>
+                                <span class="card-body--intro"> Here are some of my latest work, also you can go to my GitHub page</span>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -169,18 +187,22 @@
                 <article class="card-content">
                     <div class="card-header">
                         <div class="card-body">
-                            <h3>Wanna chat or need some consultation ? </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Sed id erat a magna lobortis dictum. Nunc est arcu, lacinia quis sapien placerat,
-                                laoreet tincidunt nulla.</p>
+                            <div class="contact-mail">
+                            <h3>Wanna chat or need some consulting? </h3>
+                            <p><a href="mailto:sherie.klappenbach@gmail.com">Send me mail here</a></p>
+                            </div>
                         </div>
                         <span class="card-body--index">03.</span>
+                        <div class="form-container">
+
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
     </div>
 </div>
+<button onclick="topFunction()" id="toTopButton" title="Go to top"> <i class="arrow up"></i></button>
 <footer>
     <span>Sherie.klappenbach@gmail.com</span>
 </footer>
