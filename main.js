@@ -3,33 +3,33 @@ window.onscroll = function () {
 };
 
 
+const enterNavButton = document.getElementById('enterBtn');
+const containerMainPage = document.getElementById('card-container');
+const links = document.querySelectorAll('a');
 const cards = document.querySelectorAll('.card-inner');
 let cardArray = Array.from(cards);
-console.log(cardArray, 'hej');
-cardArray.forEach((card) => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('is-flipped')
-        console.log('after toggle');
-        // let otherCards = cardArray.filter( activeCard => activeCard.id !== card.id );
-        // console.log(otherCards);
-        // otherCards.forEach((notClicked) => {
-        //     notClicked.classList.remove('is-flipped');
-        // });
-    });
+let linksArray = Array.from(links);
 
+// Enter btn scroll
+enterNavButton.onclick = function (){
+     containerMainPage.scrollIntoView();
+};
+
+// Prevent flip animation on links
+linksArray.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 });
 
-/*    let mouseCursor = document.querySelector('#cursor-letter-ark');
+//Card flip animation
+    cardArray.forEach((card) => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped')
+        });
+    });
 
-    window.addEventListener('mousemove', cursor);
-
-    function cursor(e) {
-        mouseCursor.style.top = e.pageY + 'px';
-        mouseCursor.style.left = e.pageX + 'px';
-    }*/
-
-
-// Scroll to top button
+// Scroll to top arrow button
 backToTopBtn = document.getElementById("toTopButton");
 
 function scrollFunction() {
@@ -47,8 +47,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// CAROUSEL VIEW
-
+// Carousel
 let indexView = 0;
 let t = 0;
 slideShow(indexView);

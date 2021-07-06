@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="eng" xmlns="http://www.w3.org/1999/html">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -15,7 +15,6 @@
     />
     <meta name="author" content="Sherie Klappenbach"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/cursor.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <!--<link rel="shortcut icon" href="image/sherie-logo-white_2x.png" />-->
@@ -39,23 +38,7 @@
     <title> Portfolio | Welcome </title>
 </head>
 <body>
-<!--<div id="cursor-letter-ark">
-    <div id="cursor-word">
-        <span class="w0">H</span>
-        <span class="w1">i</span>
-        <span class="w2"></span>
-        <span class="w3">b</span>
-        <span class="w4">e</span>
-        <span class="w5">a</span>
-        <span class="w6">u</span>
-        <span class="w7">t</span>
-        <span class="w8">i</span>
-        <span class="w9">f</span>
-        <span class="w10">u</span>
-        <span class="w11">l</span>
-        <span class="w12">!</span>
-    </div>
-</div>-->
+
 <!--Navigation-->
 <header>
     <div id="brand-logo">
@@ -79,7 +62,7 @@
 </section>
 <!--Nav-->
 <nav>
-    <h2>Enter<span class="coloured-dot">.</span></h2>
+    <h2 id="enterBtn">Enter<span class="coloured-dot">.</span></h2>
     <div class="nav-list">
         <a href="#showcase">Portfolio</a>
         <div class="vertical-line"></div>
@@ -87,7 +70,7 @@
     </div>
 </nav>
 <!--About-->
-<div class="card-container">
+<div id="card-container">
     <div id="about" class="cards">
         <div class="card-inner">
             <div class="card-visual card-visual--front">
@@ -104,7 +87,7 @@
                 <article class="card-content">
                     <div class="card-header">
                         <div class="profile">
-                                <img src="./image/couple-2017.jpeg">
+                            <img src="./image/couple-2017.jpeg">
                         </div>
                         <div class="card-body">
                             <h3>Hi there, my name is Sherie</h3>
@@ -116,9 +99,9 @@
                     </div>
                     <br/>
                     <div class="fa-icons">
-                        <a href=""><i class="fa fa-linkedin"></i></a>
-                        <a href=""><i class="fa fa-github"></i></a>
-                        <a href=""><i class="fa fa-envelope-o"></i></a>
+                        <a href="https://www.linkedin.com/in/sherie-klappenbach/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/SherieBach"><i class="fa fa-github"></i></a>
+                        <a href="mailto:sherie.klappenbach@gmail.com"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </article>
             </div>
@@ -145,18 +128,24 @@
                             <a class="prev" onclick="show(-1)">&#x3c;</a>
                             <a class="next" onclick="show(1)">&#x3e;</a>
                             <div class="carousel-container">
-                                <div class="imageSlides">
-                                    <div class="img"><img src="./image/adventure.png"></div>
-                                    <div><span class="text"> Class project for design</span></div>
-                                </div>
-                                <div class="imageSlides">
-                                   <div class="img"> <img src="./image/softwarelse.png"></div>
-                                    <div><span class="text"> Website in Vue.js</span></div>
-                                </div>
-                                <div class="imageSlides">
-                                  <div class="img" >  <img class="image" src="./image/unsplash-search.png"></div>
-                                    <div><span>Image search - Unsplash API</span></div>
-                                </div>
+                                <a href="https://github.com/SherieBach/UX-UI">
+                                    <div class="imageSlides">
+                                        <div class="img"><img src="./image/adventure.png"></div>
+                                        <div><span class="text">Class project for design</span></div>
+                                    </div>
+                                </a>
+                                <a href="https://test.softwarelse.se/">
+                                    <div class="imageSlides">
+                                        <div class="img"><img src="./image/softwarelse.png"></div>
+                                        <div><span class="text">Website in Vue.js</span></div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/SherieBach/search-unsplash">
+                                    <div class="imageSlides">
+                                        <div class="img"><img class="image" src="./image/unsplash-search.png"></div>
+                                        <div><span>Image search - Unsplash API</span></div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="card-body--content">
@@ -188,8 +177,8 @@
                     <div class="card-header">
                         <div class="card-body">
                             <div class="contact-mail">
-                            <h3>Wanna chat or need some consulting? </h3>
-                            <p><a href="mailto:sherie.klappenbach@gmail.com">Send me mail here</a></p>
+                                <h3>Wanna chat or need some consulting? </h3>
+                                <p><a href="mailto:sherie.klappenbach@gmail.com">Send me mail here</a></p>
                             </div>
                         </div>
                         <span class="card-body--index">03.</span>
@@ -202,7 +191,7 @@
         </div>
     </div>
 </div>
-<button onclick="topFunction()" id="toTopButton" title="Go to top"> <i class="arrow up"></i></button>
+<button onclick="topFunction()" id="toTopButton" title="Go to top"><i class="arrow up"></i></button>
 <footer>
     <span>Sherie.klappenbach@gmail.com</span>
 </footer>
