@@ -140,6 +140,7 @@ nav .nav-list {
     animation: animate 2s infinite alternate;
 
 }
+
 nav > #enterBtn {
     cursor: pointer;
 }
@@ -329,10 +330,6 @@ nav a {
 }
 
 .profile {
-}
-
-.profile {
-    margin: 0 auto;
     transform-origin: 35% 35%;
     overflow: hidden;
     width: 300px;
@@ -344,7 +341,7 @@ nav a {
 
 .profile > img {
     position: absolute;
-    left: -35%;
+    left: -30%;
     bottom: -5%;
     width: 205%;
     transform: rotate(-45deg);
@@ -380,6 +377,10 @@ nav a {
     font-weight: normal;
     font-family: 'Radley', serif;
 }
+.card-body a {
+    text-decoration: none;
+
+}
 
 .card-body p {
     color: #eeeeee;
@@ -388,9 +389,11 @@ nav a {
 
 .card-body .contact-mail, a {
     color: #f2f2f2;
-    text-decoration: none;
-}
 
+}
+.contact-mail > a {
+    text-decoration: underline;
+}
 .card-visual .heading {
     display: block;
     color: #3a7ea0;
@@ -497,7 +500,7 @@ footer {
     cursor: pointer;
     font-size: 18px;
     padding: 15px 12px 3px 12px;
-    border:none;
+    border: none;
 }
 
 #toTopButton > .arrow {
@@ -516,11 +519,6 @@ footer {
     color: #e43f5a;
 }
 
-@media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px
-    }
-}
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -586,7 +584,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         min-width: 350px;
 
     }
+    .card-visual {
 
+    }
     .card-visual .heading {
         font-size: 1em;
     }
@@ -613,18 +613,32 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 1em;
     }
 
+    .card-content {
+
+    }
+
     .card-body {
         padding: 0;
     }
+
+    .card-body > h3 {
+        margin: 0 0 15px 0;
+    }
+
     .imageSlides .img {
         height: 250px;
     }
 
     .card-body--inner {
         margin: 0;
+        align-items: center;
     }
-    .card-body--intro {
-        margin: 10px;
+
+    .card-body--inner > h3 {
+        margin: 0 0 15px 0;
+        font-size: 1.5em;
+        font-weight: normal;
+        font-family: 'Radley', serif;
     }
 
     .prev, .next {
@@ -634,11 +648,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 3em;
         transform: rotate(0deg);
     }
+
     .prev {
         top: 90%;
         left: 5%;
     }
-    .next{
+
+    .next {
         top: 90%;
         left: 80%;
     }
@@ -648,16 +664,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
         flex-direction: column-reverse;
         justify-content: space-around;
         align-items: center;
+        padding: 20px 40px;
     }
 
     .profile {
-        transform-origin: 40% 50%;
-        width: 150px;
-        height: 150px;
+        transform-origin: 55% 55%;
+        width: 110px;
+        height: 110px;
     }
 
     .card-header .card-body--index {
-        font-size: 8em;
+        font-size: 5em;
     }
 }
 
@@ -667,109 +684,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
-    #about, #showcase, #contact {
-        margin: 0 0 5em;
-    }
-
-    #brand-logo img {
-        max-width: 13%;
-    }
-
-    .hero-container {
-        margin: auto;
-    }
-
-    header img {
-        width: 10%;
-        padding: 2em;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .tri-shade {
-        display: none;
-    }
-
-    #hero {
-        margin-bottom: 10em;
-        padding-top: 0;
-    }
-
-    #hero .mobile-img {
-        width: 380px;
-        height: auto;
-        display: block;
-    }
-
-    #hero .tri-img {
-        display: none;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-        margin-top: 1em;
-    }
-
-    #hero h2 {
-        font-size: 3rem;
-    }
-
-    #hero h3 {
-        font-size: 1.5rem;
-    }
-
-    .cards {
-        min-width: 350px;
-
-    }
-
-    .card-visual .heading {
-        font-size: 1em;
-    }
-
-    .card-visual--container {
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .cards:nth-child(even) .card-visual--container {
-        flex-direction: column;
-        margin-left: 7.5em;
-    }
-
-    .cards:nth-child(even) .card-visual--content {
-        align-items: normal;
-    }
-
-    .card-visual .index {
-        font-size: 8em;
-    }
-
-    .card-visual--front .subheading {
-        font-size: 1em;
-    }
-
-    .card-body {
-        padding: 0;
-    }
-
-    .card-header {
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
 
     .profile img {
-        width: 180px;
-        height: 180px;
+        width: auto;
+        height: 170px;
         margin: 0;
     }
 
-    .card-header .card-body--index {
-        font-size: 8em;
-    }
 }
 
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
@@ -797,4 +718,76 @@ and (-webkit-min-device-pixel-ratio: 2) {
     #brand-logo img {
         max-width: 5%;
     }
+    .card-visual .index {
+        font-size: 8em;
+    }
+
+    .card-visual--front .subheading {
+        font-size: 1em;
+    }
+
+    .card-content {
+
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .card-body > h3 {
+        margin: 0 0 15px 0;
+    }
+
+    .imageSlides .img {
+        height: 250px;
+    }
+
+    .card-body--inner {
+        margin: 0;
+        align-items: center;
+    }
+    .card-body--inner > h3 {
+        margin: 0 0 15px 0;
+        font-size: 1.5em;
+        font-weight: normal;
+        font-family: 'Radley', serif;
+    }
+
+    .prev, .next {
+        position: fixed;
+        color: white;
+        z-index: 100;
+        font-size: 3em;
+        transform: rotate(0deg);
+    }
+
+    .prev {
+        top: 90%;
+        left: 5%;
+    }
+
+    .next {
+        top: 90%;
+        left: 80%;
+    }
+
+    .card-header {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .profile {
+        transform-origin: 55% 55%;
+        width: 110px;
+        height: 110px;
+    }
+
+    .card-header .card-body--index {
+        font-size: 5em;
+    }
 }
+
+
