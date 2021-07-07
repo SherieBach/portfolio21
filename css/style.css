@@ -412,7 +412,12 @@ nav a {
     align-items: flex-end;
     margin-left: 55px;
 }
-
+.card-body--inner > h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: 'Radley', serif;
+}
 
 .carousel-container {
     margin: auto;
