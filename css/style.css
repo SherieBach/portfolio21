@@ -22,26 +22,13 @@ ul {
 }
 
 hr {
-    border: 1px solid #3a7ea0;
+    border: 1px solid #3089b6;
     margin: 0;
-    background-color: #3a7ea0;
+    background-color: #3089b6;
 }
 
 p {
     font-family: 'Raleway', sans-serif;
-}
-
-/*Header*/
-
-#brand-logo img {
-    max-width: 4%;
-    height: auto;
-    padding: 2em;
-}
-
-
-header a:hover {
-    color: #e43f5a;
 }
 
 /*Hero*/
@@ -133,7 +120,7 @@ nav .nav-list {
     left: 50%;
     width: 1px;
     height: 33.3%;
-    background: #3a7ea0;
+    background: #3089b6;
     z-index: 2;
     transform-origin: bottom;
     transform: scaleX(0);
@@ -275,12 +262,12 @@ nav a {
 }
 
 .card-visual--content .hr-blue {
-    border: 2px solid #3a7ea0;
+    border: 2px solid #3089b6;
     width: 2.5em;
 }
 
 .card-visual--back {
-    background-color: #3a7ea0;
+    background-color: #3089b6;
     transform: rotateY(180deg);
     cursor: initial;
 }
@@ -396,7 +383,7 @@ nav a {
 }
 .card-visual .heading {
     display: block;
-    color: #3a7ea0;
+    color: #3089b6;
     font-weight: 500;
 
 }
@@ -491,6 +478,7 @@ footer {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
+    padding-top:10px;
 }
 
 #toTopButton {
@@ -506,6 +494,7 @@ footer {
     font-size: 18px;
     padding: 15px 12px 3px 12px;
     border: none;
+    scroll-behavior: smooth;
 }
 
 #toTopButton > .arrow {
@@ -542,17 +531,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .hero-container {
         margin: auto;
-    }
+        padding-top: 4em;
 
-    header img {
-        width: 10%;
-        padding: 2em;
     }
-
-    nav {
+    #enterBtn {
         display: none;
     }
+    nav .nav-list  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav a {
+        padding: 2rem;
+    }
 
+    .vertical-line {
+        display: none;
+    }
     .tri-shade {
         display: none;
     }
@@ -575,6 +572,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     #hero h1 {
         font-size: 2rem;
         margin-top: 1em;
+        color: #f2f2f2;
     }
 
     #hero h2 {
@@ -583,6 +581,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #hero h3 {
         font-size: 1.5rem;
+        color: #f2f2f2;
     }
 
     .cards {

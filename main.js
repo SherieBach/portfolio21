@@ -2,6 +2,16 @@ window.onscroll = function () {
     scrollFunction()
 };
 
+function openNav(x) {
+    x.classList.toggle('active');
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("mySidenav").style.height = "50%";
+}
+
+function closeNav(x) {
+    document.getElementById("mySidenav").style.width = "0";
+    x.classList.toggle('close')
+}
 
 const enterNavButton = document.getElementById('enterBtn');
 const containerMainPage = document.getElementById('card-container');
@@ -35,10 +45,8 @@ backToTopBtn = document.getElementById("toTopButton");
 function scrollFunction() {
     if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 500) {
         backToTopBtn.style.display = "block";
-        console.log("block");
     } else {
         backToTopBtn.style.display = "none";
-        console.log("none");
 
     }
 }
