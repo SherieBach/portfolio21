@@ -176,9 +176,6 @@ nav a {
     padding: 10rem;
 }
 
-.pointer {
-}
-
 #card-container {
     display: flex;
     flex-direction: column;
@@ -189,7 +186,7 @@ nav a {
 
 .cards {
     min-width: 80%;
-    height: 600px;
+    height: 750px;
     perspective: 1000px;
 }
 
@@ -222,11 +219,36 @@ nav a {
 }
 
 .card-visual--front {
-    background-color: #262728;
+    background: #262728;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
 
+.card-visual--front.scrolled {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.8s ease-in-out;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: rotateY(1deg);
+    }
+
+    20%, 80% {
+        transform: rotateY(-2deg);
+    }
+
+    30%, 40%, 50%, 70% {
+        transform: rotateY(-3deg);
+    }
+
+    60% {
+        transform: rotateY(3 cledeg);
+    }
 }
 
 .card-visual--container {
@@ -276,9 +298,13 @@ nav a {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
     align-items: center;
+}
+
+#about .card-visual--back > .card-content {
+    justify-content: center;
 }
 
 .cards:nth-child(even) .card-body {
@@ -364,6 +390,7 @@ nav a {
     font-weight: normal;
     font-family: 'Radley', serif;
 }
+
 .card-body a {
     text-decoration: none;
 
@@ -378,9 +405,11 @@ nav a {
     color: #f2f2f2;
 
 }
+
 .contact-mail > a {
     text-decoration: underline;
 }
+
 .card-visual .heading {
     display: block;
     color: #3089b6;
@@ -399,6 +428,7 @@ nav a {
     align-items: flex-end;
     margin-left: 55px;
 }
+
 .card-body--inner > h3 {
     margin: 0 0 15px 0;
     font-size: 1.5em;
@@ -414,7 +444,7 @@ nav a {
 
 .imageSlides .img {
     overflow: hidden;
-    height: 350px;
+    height: 300px;
     width: 100%;
 }
 
@@ -424,22 +454,64 @@ nav a {
 }
 
 .imageSlides {
+    font-family: 'Raleway', serif;
     display: none;
     margin: 0;
     padding: 0;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     overflow: hidden;
+}
+
+.imageSlides .text-header {
+    font-weight: bold;
+}
+
+.tech-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.tech-list > span {
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.tech-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    width: 300px;
+}
+
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 5px;
+    background: #3c4146;
+    border-right: 3px solid #3089b6;
+}
+
+.github-icon a {
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .text {
     color: #f2f2f2;
     text-transform: none;
-    margin: 10px;
-    padding: 8px 12px;
     width: 100%;
     text-align: left;
+    font-size: 12px;
 }
 
 .card-body--content {
@@ -459,13 +531,13 @@ nav a {
 }
 
 .prev {
-    bottom: 30%;
-    transform: rotate(-90deg);
+    bottom: 50%;
+    left:7%
 }
 
 .next {
     top: 30%;
-    transform: rotate(-90deg);
+    left: 50%;
 
 }
 
@@ -478,7 +550,7 @@ footer {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 #toTopButton {
@@ -534,15 +606,18 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding-top: 4em;
 
     }
+
     #enterBtn {
         display: none;
     }
-    nav .nav-list  {
+
+    nav .nav-list {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     nav a {
         padding: 2rem;
     }
@@ -550,6 +625,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .vertical-line {
         display: none;
     }
+
     .tri-shade {
         display: none;
     }
@@ -586,11 +662,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .cards {
         min-width: 350px;
-
+        height: 800px;
     }
+
     .card-visual {
 
     }
+
     .card-visual .heading {
         font-size: 1em;
     }
@@ -618,7 +696,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .card-content {
-
     }
 
     .card-body {
@@ -660,7 +737,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .next {
         top: 90%;
-        left: 80%;
+        left: 75%;
     }
 
     .card-header {
@@ -673,6 +750,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .profile {
         transform-origin: 55% 55%;
+        margin: 50px;
         width: 110px;
         height: 110px;
     }
@@ -722,6 +800,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     #brand-logo img {
         max-width: 5%;
     }
+
     .card-visual .index {
         font-size: 8em;
     }
@@ -750,6 +829,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin: 0;
         align-items: center;
     }
+
     .card-body--inner > h3 {
         margin: 0 0 15px 0;
         font-size: 1.5em;
