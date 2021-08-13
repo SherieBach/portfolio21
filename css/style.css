@@ -496,11 +496,13 @@ li {
     color: white;
     text-align: center;
     text-decoration: none;
-    padding: 0 5px;
+    padding: 2px 5px 0 5px;
     background: #3c4146;
     border-right: 3px solid #3089b6;
 }
-
+.github-icon {
+    margin-top: 10px;
+}
 .github-icon a {
     cursor: pointer;
     font-size: 16px;
@@ -707,7 +709,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .imageSlides .img {
-        height: 250px;
+        height: 220px;
     }
 
     .card-body--inner {
