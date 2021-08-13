@@ -247,7 +247,7 @@ nav a {
     }
 
     60% {
-        transform: rotateY(3 cledeg);
+        transform: rotateY(3deg);
     }
 }
 
@@ -298,7 +298,7 @@ nav a {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
 }
@@ -462,6 +462,7 @@ nav a {
     flex-direction: column;
     align-items: baseline;
     overflow: hidden;
+    position: relative;
 }
 
 .imageSlides .text-header {
@@ -519,28 +520,34 @@ li {
 .card-body--content {
     display: flex;
 }
+.arrow-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top:25%;
+    z-index: 100;
+}
 
-.prev, .next {
+.arrow-container i {
+    color: #948e8e;
     cursor: pointer;
-    position: fixed;
-    left: 5%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 4em;
+    height: 30px;
+    padding: 15px;
+    font-size: 1.5em;
+    transition: color .5s, color .5s;
+}
+.arrow-container  i:hover{
+    color: #212121;
 }
 
-.prev {
-    bottom: 50%;
-    left:7%
+i .prev {
+padding-right:20px ;
 }
 
-.next {
-    top: 30%;
-    left: 50%;
-
+i .next {
+    padding-left: 20px;
 }
 
 footer {
@@ -698,6 +705,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .card-content {
+        justify-content: end;
+        flex-direction: column;
+        align-items: center;
     }
 
     .card-body {
@@ -724,23 +734,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-family: 'Radley', serif;
     }
 
-    .prev, .next {
-        position: fixed;
-        color: white;
-        z-index: 100;
-        font-size: 3em;
-        transform: rotate(0deg);
-    }
-
-    .prev {
-        top: 90%;
-        left: 5%;
-    }
-
-    .next {
-        top: 90%;
-        left: 75%;
-    }
 
     .card-header {
         flex-wrap: wrap;
@@ -839,7 +832,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-family: 'Radley', serif;
     }
 
-    .prev, .next {
+ /*   .prev, .next {
         position: fixed;
         color: white;
         z-index: 100;
@@ -855,7 +848,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .next {
         top: 90%;
         left: 80%;
-    }
+    }*/
 
     .card-header {
         flex-wrap: wrap;

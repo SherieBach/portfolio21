@@ -2,7 +2,7 @@ window.onscroll = function () {
     scrollFunction()
 };
 
-function openNav(x) {
+/*function openNav(x) {
     x.classList.toggle('active');
     document.getElementById("mySidenav").style.width = "100%";
     document.getElementById("mySidenav").style.height = "50%";
@@ -11,7 +11,7 @@ function openNav(x) {
 function closeNav(x) {
     document.getElementById("mySidenav").style.width = "0";
     x.classList.toggle('close')
-}
+}*/
 
 const enterNavButton = document.getElementById('enterBtn');
 const containerMainPage = document.getElementById('card-container');
@@ -21,8 +21,8 @@ let cardArray = Array.from(cards);
 let linksArray = Array.from(links);
 
 // Enter btn scroll
-enterNavButton.onclick = function (){
-     containerMainPage.scrollIntoView();
+enterNavButton.onclick = function () {
+    containerMainPage.scrollIntoView();
 };
 
 // Prevent flip animation on links
@@ -33,11 +33,11 @@ linksArray.forEach((link) => {
 });
 
 //Card flip animation
-    cardArray.forEach((card) => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('is-flipped')
-        });
+cardArray.forEach((card) => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped')
     });
+});
 
 // Scroll to top arrow button
 backToTopBtn = document.getElementById("toTopButton");
@@ -47,15 +47,39 @@ function scrollFunction() {
         backToTopBtn.style.display = "block";
     } else {
         backToTopBtn.style.display = "none";
-
     }
 }
+
+
+let observedElements = document.querySelectorAll('.card-visual--front');
+
+const options = {
+    threshold: 0.5
+}
+
+const inViewCallback = entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { // define the event/property you want to use
+            entry.target.classList.add('scrolled');
+        } else {
+
+        }
+    });
+}
+
+let observer = new IntersectionObserver(inViewCallback, options);
+
+observedElements.forEach(element => {
+    observer.observe(element) // run the observer
+});
+
+
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-// Carousel
+// CardSlide
 let indexView = 0;
 let t = 0;
 slideShow(indexView);
@@ -82,6 +106,5 @@ function slideShow(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     }
-        slides[indexView - 1].style.display = "flex";
-
+    slides[indexView - 1].style.display = "flex";
 }
