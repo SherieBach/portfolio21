@@ -50,11 +50,12 @@ p {
     height: 100%;
 }
 
-
+svg {
+    margin-bottom: 40px;
+}
 .rec {
     opacity: 0;
 }
-
 
 .rec.animate {
 
@@ -83,9 +84,7 @@ p {
     }
 }
 
-#hero .mobile-img {
-    display: none;
-}
+
 
 section,
 .hero-container {
@@ -679,11 +678,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding-top: 0;
     }
 
-    #hero .mobile-img {
-        width: 380px;
-        height: auto;
-        display: block;
-    }
 
     #hero .tri-img {
         display: none;
