@@ -60,14 +60,14 @@ svg {
 
     transform-box: fill-box;
     transform: rotate(-45deg);
-    animation: rotation 3.5s ease-out forwards;
+    animation: rotation 2s ease-out forwards;
 }
 
 
 @keyframes rotation {
     0% {
         opacity: 0;
-        transform-origin: -300px 0 100px;
+        transform-origin: -250px 0 100px;
         transform: rotateY(180deg) rotate(45deg) scale(2.5);
         filter: drop-shadow( -30px 30px 5px rgb(253, 253, 253));
     }
