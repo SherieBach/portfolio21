@@ -20,6 +20,19 @@ const cards = document.querySelectorAll('.card-inner');
 let cardArray = Array.from(cards);
 let linksArray = Array.from(links);
 
+//svg image animation
+let rects = Array.from(document.getElementsByClassName('rec'));
+
+let sortedRects = rects.sort((a, b) => a.id - b.id);
+console.log(sortedRects);
+
+sortedRects.forEach((rect, i) => {
+    rect.style.animationDelay = i * 200 + 'ms';
+    rect.classList.add('animate');
+
+    console.log('runs', rect);
+});
+
 // Enter btn scroll
 enterNavButton.onclick = function () {
     containerMainPage.scrollIntoView();

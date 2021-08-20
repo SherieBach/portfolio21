@@ -50,6 +50,39 @@ p {
     height: 100%;
 }
 
+
+.rec {
+    opacity: 0;
+}
+
+
+.rec.animate {
+
+    transform-box: fill-box;
+    transform: rotate(-45deg);
+    animation: rotation 3.5s ease-out forwards;
+}
+
+
+@keyframes rotation {
+    0% {
+        opacity: 0;
+        transform-origin: -300px 0 100px;
+        transform: rotateY(180deg) rotate(45deg) scale(2.5);
+        filter: drop-shadow( -30px 30px 5px rgb(253, 253, 253));
+    }
+    50% {
+        opacity: 1;
+        transform: rotateY(160deg) rotate(-30deg) scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform-origin: 0 0 0;
+        transform: rotateY(0deg) rotate(-45deg) scale(1);
+        filter: drop-shadow( 0 0 2px rgb(255, 255, 255));
+    }
+}
+
 #hero .mobile-img {
     display: none;
 }
@@ -531,12 +564,14 @@ li {
 }
 
 .arrow-container i {
-    color: #948e8e;
+    background-color: rgba(114, 114, 114, 0.25);
+    color: #666f77;
     cursor: pointer;
     height: 30px;
     padding: 15px;
     font-size: 1.5em;
     transition: color .5s, color .5s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 .arrow-container  i:hover{
     color: #212121;
