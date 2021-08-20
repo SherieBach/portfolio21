@@ -7,7 +7,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: #212121;
+    background-color: #272727;
     color: #f0f8ff;
     overflow-y: scroll;
     font-family: "Cinzel", serif;
@@ -39,7 +39,6 @@ p {
     flex-wrap: wrap;
     align-items: center;
     padding-top: 6em;
-    background-color: #212121;
     min-height: 400px;
     text-align: center;
     margin: auto;
@@ -140,7 +139,7 @@ nav .nav-list {
     position: fixed;
     left: 0;
     bottom: 0;
-    background-color: #212121;
+    background-color: #272727;
     z-index: 1;
 }
 
@@ -251,7 +250,7 @@ nav a {
 }
 
 .card-visual--front {
-    background: #262728;
+    background: #333333;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -646,7 +645,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .hero-container {
         margin: auto;
-        padding-top: 4em;
 
     }
 
