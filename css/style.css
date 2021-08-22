@@ -50,7 +50,8 @@ p {
 }
 
 svg {
-    margin-bottom: 40px;
+    margin-top: 50px;
+    height: 400px;
 }
 .rec {
     opacity: 0;
@@ -380,7 +381,7 @@ nav a {
     height: 300px;
     transform: rotate(45deg) translateY(10px);
     position: relative;
-
+    margin: 20px;
 }
 
 .profile > img {
@@ -408,9 +409,12 @@ nav a {
     font-family: "Cinzel", serif;
 }
 
+#showcase > .card-body {
+    height: 600px;
+
+}
 .card-body {
     max-width: 400px;
-    height: 600px;
     padding: 30px;
     position: relative;
 }
@@ -677,7 +681,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #hero {
-        margin-bottom: 10em;
+        margin-bottom: 5em;
         padding-top: 0;
     }
 
@@ -785,6 +789,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .card-header .card-body--index {
         font-size: 5em;
     }
+    @keyframes shake {
+        10%, 90% {
+            transform: rotateY(3deg);
+        }
+
+        20%, 80% {
+            transform: rotateY(-4deg);
+        }
+
+        30%, 40%, 50%, 70% {
+            transform: rotateY(-4deg);
+        }
+
+        60% {
+            transform: rotateY(5deg);
+        }
+    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -863,24 +884,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         font-weight: normal;
         font-family: 'Radley', serif;
     }
-
- /*   .prev, .next {
-        position: fixed;
-        color: white;
-        z-index: 100;
-        font-size: 3em;
-        transform: rotate(0deg);
-    }
-
-    .prev {
-        top: 90%;
-        left: 5%;
-    }
-
-    .next {
-        top: 90%;
-        left: 80%;
-    }*/
 
     .card-header {
         flex-wrap: wrap;
