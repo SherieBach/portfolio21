@@ -410,6 +410,7 @@ nav a {
 
 .card-body {
     max-width: 400px;
+    height: 600px;
     padding: 30px;
     position: relative;
 }
@@ -471,6 +472,7 @@ nav a {
     margin: auto;
     position: relative;
     max-width: 450px;
+    height: 100%;
 }
 
 .imageSlides .img {
@@ -480,6 +482,7 @@ nav a {
 }
 
 .imageSlides img {
+    object-fit: cover;
     width: 100%;
     vertical-align: center;
 }
@@ -490,10 +493,12 @@ nav a {
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: baseline;
     overflow: hidden;
     position: relative;
+    justify-content: space-between;
 }
 
 .imageSlides .text-header {
