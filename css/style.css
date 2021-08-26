@@ -55,7 +55,6 @@ p {
 }
 
 .rec.animate {
-
     transform-box: fill-box;
     transform: rotate(-45deg);
     animation: rotation 2s ease-out forwards;
@@ -86,6 +85,31 @@ section,
 .hero-container {
     position: relative;
     margin-bottom: 10em;
+}
+
+#hero h1, h2, h3 {
+    background: #272727 -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%) no-repeat 0 0;
+    -webkit-background-size: 200px;
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1.5;
+}
+
+@-webkit-keyframes shine {
+    0%, 10% {
+        background-position: -1000px;
+    }
+    20% {
+        background-position: top left;
+    }
+    90% {
+        background-position: top right;
+    }
+    100% {
+        background-position: 1000px;
+    }
 }
 
 #hero h1 {
