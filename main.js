@@ -72,7 +72,7 @@ const options = {
 
 const inViewCallback = entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) { // define the event/property you want to use
+        if (entry.isIntersecting) {
             entry.target.classList.add('scrolled');
         } else {
 
@@ -94,30 +94,22 @@ function topFunction() {
 
 // CardSlide
 let indexView = 0;
-let t = 0;
 slideShow(indexView);
 
 
-function show(n) {
+function show(n) { // next & prev btn
     event.stopPropagation();
     slideShow(indexView += n);
 }
 
-function slideShow(n) {
+function slideShow() {
 
     let i;
     let slides = document.getElementsByClassName('imageSlides');
+    let slidesArray = Array.from(slides);
 
-
-    if (n > slides.length) {
-        indexView = 1;
-    }
-    if (n < 1) {
-        indexView = slides.length;
-    }
-
-    for (i = 0; i < slides.length; i++) {
+    for (i = 0; i < slidesArray.length; i++) {
         slides[i].style.display = 'none';
     }
-    slides[indexView - 1].style.display = "flex";
+    slidesArray[Math.abs(indexView % slidesArray.length)].style.display = "flex";
 }
