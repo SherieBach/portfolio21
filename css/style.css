@@ -595,8 +595,8 @@ li {
 }
 
 .arrow-container i {
-    background-color: rgba(114, 114, 114, 0.25);
-    color: #666f77;
+    background-color: rgba(114, 114, 114, 0.77);
+    color: #4c4d50;
     cursor: pointer;
     height: 30px;
     padding: 15px;
@@ -609,12 +609,36 @@ li {
     color: #212121;
 }
 
-i .prev {
+i.prev {
     padding-right: 20px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
 }
 
-i .next {
+i.next {
     padding-left: 20px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.pulse {
+    animation: pulse-animation 2.5s infinite;
+}
+
+
+@keyframes pulse-animation {
+    0% {
+        opacity: 1;
+
+    }
+    50% {
+        opacity: 0.5;
+
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 footer {
