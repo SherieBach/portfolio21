@@ -96,7 +96,6 @@ function topFunction() {
 let indexView = 0;
 slideShow(indexView);
 
-
 function show(n) { // next & prev btn
     event.stopPropagation();
     slideShow(indexView += n);
