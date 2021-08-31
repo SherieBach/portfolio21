@@ -601,12 +601,12 @@ li {
     height: 30px;
     padding: 15px;
     font-size: 1.5em;
-    transition: color .5s, color .5s;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .arrow-container i:hover {
-    color: #212121;
+    color: #ffffff;
+    background-color: #aaaaaa;
 }
 
 i.prev {
@@ -622,10 +622,13 @@ i.next {
     border-bottom-left-radius: 50%;
 }
 
-.pulse {
+.pulse, .arrow-container {
     animation: pulse-animation 2.5s infinite;
 }
 
+.pulse, .arrow-container:hover {
+    animation-play-state: paused;
+}
 
 @keyframes pulse-animation {
     0% {
