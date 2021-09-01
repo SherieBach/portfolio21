@@ -407,9 +407,9 @@ nav a {
 
 .profile > img {
     position: absolute;
-    left: -30%;
-    bottom: -5%;
-    width: 205%;
+    left: -25%;
+    bottom: -25%;
+    width: 150%;
     transform: rotate(-45deg);
 }
 
